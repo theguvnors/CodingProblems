@@ -15,9 +15,6 @@ class NumberSwapper {
     }
 
     private swapper(a: number, b: number): void {
-        const aWas = a;
-        const bWas = b;
-
         if (a !== b) {
             a = a - b;
             b = b + a;
@@ -31,9 +28,6 @@ class NumberSwapper {
         Using XOR to do bit manipulation has the benefit of working with more data types.
      */
     private swapperBitManipulation(a: number, b: number): void {
-        const aWas = a;
-        const bWas = b;
-
         if (a !== b) {
             a = a ^ b;
             b = a ^ b;
@@ -46,6 +40,7 @@ class NumberSwapper {
     private swapperDestructor(a: number, b: number): void {
         let [a1, b1] = [a, b];
         [a1, b1] = [b1, a1];
+
         console.log([a1, b1]);
     }
 }
