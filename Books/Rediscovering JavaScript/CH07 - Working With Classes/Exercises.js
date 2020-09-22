@@ -1,4 +1,9 @@
 'use strict';
+/*
+    EX:1 - implement a class that produces the expected result
+ */
+
+// my code goes
 class Book {
     get pages() {
         return this._pages;
