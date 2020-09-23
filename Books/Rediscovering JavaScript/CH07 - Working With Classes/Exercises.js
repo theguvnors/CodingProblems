@@ -105,12 +105,27 @@ console.log(todo.completedCount); // 1
  */
 
 // my code goes  here
-class TodoMap {}
+function createTodo() {
+    let map = new Map();
+    map.set('learn JavaScript', 'done');
+    map.set('write elegant code', 'work in progress');
+    map.set('automate tests', 'work in progress');
+    return map;
+}
 
-function completedCount(todo) {}
+function completedCount(todo) {
+    let count = 0;
+
+    // deconstruct the map
+    for (const [book, progress] of todo.entries()) {
+        if (progress === 'done') count++;
+    }
+
+    return count;
+}
 // There Code
 
-const todoMap = new Todo();
+const todoMap = createTodo(); // returns a map
 console.log(todoMap.get('learn JavaScript')); // done
 console.log(todoMap.get('write elegant code')); // work in progress
 console.log(todoMap.get('automate tests')); // work in progress
