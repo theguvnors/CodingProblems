@@ -27,6 +27,7 @@ class Book {
         this._copiesSold = copiesSold;
     }
 }
+// There Code
 const book = new Book('who moved my cheese?', 'spencer johnson', 96);
 console.log(book.title); // who moved my cheese
 console.log(book.pages); // 96
@@ -49,3 +50,24 @@ try {
 }
 
 console.log(book.copiesSold); // 1
+
+/*
+    EX:2  - Classes with static members
+    Note - will not run on ts playground, okay in browser
+ */
+
+// my code goes  here
+class Tax {
+    static forAmount(value) {
+        return value * Tax.stateRate;
+    }
+}
+Tax.stateRate = 0.08;
+
+// There Code
+console.log(Tax.stateRate); // 0.08
+console.log(Tax.forAmount(100)); // 8
+
+const forAmount = Tax.forAmount;
+this.stateRate = 0.01;
+console.log(forAmount.call(this, 100)); // 8
