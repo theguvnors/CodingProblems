@@ -71,3 +71,47 @@ console.log(Tax.forAmount(100)); // 8
 const forAmount = Tax.forAmount;
 this.stateRate = 0.01;
 console.log(forAmount.call(this, 100)); // 8
+
+/*
+    EX: 3 - Use computed properties
+ */
+
+// my code goes  here
+class Todo {
+    constructor() {
+        this['learn JavaScript'] = 'done';
+        this['write elegant code'] = 'work in progress';
+        this['automate tests'] = 'work in progress';
+    }
+    get completedCount() {
+        let count = 0;
+        Object.values(this).forEach((x) => {
+            if (x === 'done') count++;
+        });
+        return count;
+    }
+}
+
+// There Code
+
+const todo = new Todo();
+console.log(todo['learn JavaScript']); // done
+console.log(todo['write elegant code']); // work in progress
+console.log(todo['automate tests']); // work in progress
+console.log(todo.completedCount); // 1
+
+/*
+    EX: 4 - Use Map
+ */
+
+// my code goes  here
+class TodoMap {}
+
+function completedCount(todo) {}
+// There Code
+
+const todoMap = new Todo();
+console.log(todoMap.get('learn JavaScript')); // done
+console.log(todoMap.get('write elegant code')); // work in progress
+console.log(todoMap.get('automate tests')); // work in progress
+console.log(completedCount(todoMap)); // 1
