@@ -130,3 +130,36 @@ console.log(todoMap.get('learn JavaScript')); // done
 console.log(todoMap.get('write elegant code')); // work in progress
 console.log(todoMap.get('automate tests')); // work in progress
 console.log(completedCount(todoMap)); // 1
+
+/*
+    EX: 5 - Use Sets
+ */
+
+// my code goes  here
+function create(...sports) {
+    let set = new Set();
+    sports.forEach((x) => {
+        if (set.has(x.toUpperCase())) {
+            set.add(x.toUpperCase());
+        }
+    });
+    return set;
+}
+
+function toLowerCase(oldSet) {
+    [...oldSet].forEach((x) => {
+        x = x.toLowerCase();
+    });
+    return oldSet;
+}
+// There Code
+
+const sports = create(['Soccer', 'Football', 'Cricket', 'Tennis', 'soccer']);
+
+console.log(sports.has('FOOTBALL')); // TRUE
+console.log(sports.has('Football')); // false
+console.log(sports.size); // 4
+
+const inLowerCase = toLowerCase(sports);
+console.log(inLowerCase.has('football')); // true
+console.log(inLowerCase.size); // 4
