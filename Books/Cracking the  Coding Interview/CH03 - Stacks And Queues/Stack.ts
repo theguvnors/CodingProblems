@@ -1,6 +1,6 @@
 /*
     A stack uses LIFO (last-in first-out) ordering.
-    That is, as in a stack of dunner plates, the most recent item added to the stack is the first item to be removed.
+    That is, as in a stack of dinner plates, the most recent item added to the stack is the first item to be removed.
 
     Unlike an array, a stack does not offer constant-time access to the ith item.
     However, it does allow constant-time adds and removes, as it doesn't require shifting elements around.
