@@ -57,3 +57,18 @@ let validator = new ApiModelValidator();
 
 console.log(validator.validate(x));
 console.log(validator.validate(y));
+
+let test = 'www.typescriptlang.org/play?#code/webkitReques/tAnimationFrameqw.htm';
+
+let parts = test.split('/');
+let url = '';
+if (parts.length > 1) {
+    parts.slice(1, parts.length).forEach((x) => {
+        console.log(x);
+        url += '/' + x;
+    });
+} else {
+    url = test;
+}
+
+console.log(url);
